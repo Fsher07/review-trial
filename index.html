@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our First Tribute Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Tribute</h1>
+    <p id="description">This is description paragraph!</p>
+    <form id="survey-form" action="#">
+
+        <label for="name">Please enter your name:</label>
+        <input id="name" type="text" required placeholder="Enter your name here:"><br>
+        <label for="email">Please enter your email:</label>
+        <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" 
+            name="email" placeholder="Enter your email here"><br>
+        <label for="reg">Your region</label><br>
+        <select name="regions" id="reg">
+            <option value="North_America">North America</option>
+            <option value="Sout_America">South America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Africa">Africa</option>
+            <option value="Australia">Australia</option>
+            <option value="Antarctica">Antarctica</option>
+
+        </select><br>
+        <div class="number-rows">Number of Children</div>
+        <input type="number" id="number-children" min="0" max="10" placeholder="Children" 
+        oninvalid="this.setCustomValidity('Invalid Number')" oninput="this.setCustomValidity('')"/>
+        <p>Select your favorite cuisine:</p>
+
+         <input type="radio" id="asian" name="fav_cuisin" value="Asian">
+         <label for="asian">Asian</label><br>
+         <input type="radio" id="chinese" name="fav_cuisin" value="Chinese">
+         <label for="chinese">Chinese</label><br>
+         <input type="radio" id="turkish" name="fav_cuisin" value="Turkish">
+         <label for="turkish">Turkish</label><br>
+
+        <p>Favorite sports:</p> 
+        <input type="checkbox" id="sport1" name="sport1" value="Soccer">
+        <label for="sport1"> I like soccer</label><br>
+        <input type="checkbox" id="sport2" name="sport2" value="Badminton">
+        <label for="sport2"> I like badminton</label><br>
+        <input type="checkbox" id="sport3" name="sport3" value="BasketBall">
+        <label for="sport3"> I like BasketBall</label><br><br>
+
+
+
+       
+        </select>
+
+
+        
+
+        <div class="comment-rows">Write what you want to tell us</div>
+        <textarea  id="comment-section"  placeholder="Feel free yourself..." ></textarea>
+        <button id="submit-button" type="submit">Submit</button>
+    </form>
+</body>
+</html>
